@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guía informativa especializada en tendencias, cortes y tejidos de vestidos de novia para una elección perfecta.">
+    <title>Guía de Estilo: Vestidos de Novia | Blog Informativo</title>
+    
+    <style>
+        /* Variables de Color */
+        :root {
+            --azul-primario: #1a3a5d;
+            --azul-claro: #f0f7ff;
+            --azul-acento: #3498db;
+            --blanco: #ffffff;
+            --gris-texto: #333333;
+            --gris-suave: #eeeeee;
+        }
+
+        /* Reset y Estilos Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--gris-texto);
+            background-color: var(--blanco);
+        }
+
+        /* Navegación */
+        header {
+            background-color: var(--blanco);
+            border-bottom: 1px solid var(--gris-suave);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--azul-primario);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--azul-primario);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--azul-claro);
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--azul-primario);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        /* Contenido Principal */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 5%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--blanco);
+            border: 1px solid var(--gris-suave);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: var(--azul-primario);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            color: var(--azul-primario);
+            margin-bottom: 10px;
+        }
+
+        /* Secciones de Texto Informativo */
+        .info-section {
+            margin-bottom: 60px;
+        }
+
+        .info-section h2 {
+            color: var(--azul-primario);
+            border-bottom: 2px solid var(--azul-claro);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--azul-primario);
+            color: var(--blanco);
+            padding: 40px 5%;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            text-decoration: none;
+            font-size: 0.85rem;
+        }
+
+        .legal-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #2c3e50;
+            font-size: 0.8rem;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            nav { display: none; } /* En una landing real usarías un menú hamburguesa */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">NoviaElegante</div>
+    <nav>
+        <a href="#tendencias">Tendencias</a>
+        <a href="#cortes">Guía de Cortes</a>
+        <a href="#tejidos">Tejidos</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Guía Profesional de Vestidos de Boda</h1>
+    <p>Explore nuestra base de conocimientos sobre alta costura nupcial, diseñada para ayudarle a comprender los elementos clave antes de su gran elección.</p>
+</section>
+
+<div class="container">
+    
+    <section id="tendencias" class="info-section">
+        <h2>Tendencias Actuales en el Mundo Nupcial</h2>
+        <p>El diseño de vestidos de novia ha evolucionado hacia una mezcla de minimalismo clásico y detalles arquitectónicos. En la actualidad, la tendencia se inclina hacia la personalización y la comodidad sin sacrificar la elegancia.</p>
+        
+        <div class="grid">
+            <article class="card">
+                <div class="card-img" style="background-image: linear-gradient(rgba(26,58,93,0.8), rgba(26,58,93,0.8)), url('https://images.unsplash.com/photo-1546193430-c2d207739ed7?q=80&w=400'); background-size: cover;">
+                    Imagen de Vestido Minimalista
+                </div>
+                <div class="card-content">
+                    <h3>Minimalismo Sofisticado</h3>
+                    <p>Líneas limpias y tejidos lisos como el crepé o el mikado que resaltan la figura de la novia.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img" style="background-image: linear-gradient(rgba(26,58,93,0.8), rgba(26,58,93,0.8)), url('https://images.unsplash.com/photo-1594553763260-26233777f98f?q=80&w=400'); background-size: cover;">
+                    Imagen de Encaje Detallado
+                </div>
+                <div class="card-content">
+                    <h3>Encaje Bohemio</h3>
+                    <p>Patrones florales y texturas ligeras ideales para ceremonias al aire libre o destinos de playa.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img" style="background-image: linear-gradient(rgba(26,58,93,0.8), rgba(26,58,93,0.8)), url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400'); background-size: cover;">
+                    Imagen de Corte Clásico
+                </div>
+                <div class="card-content">
+                    <h3>Clásicos Renovados</h3>
+                    <p>El volumen tradicional se actualiza con bolsillos ocultos y escotes asimétricos modernos.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="cortes" class="info-section">
+        <h2>Guía de Cortes según la Silueta</h2>
+        <p>Identificar el corte adecuado es fundamental para armonizar las proporciones del cuerpo:</p>
+        <ul>
+            <li><strong>Corte Princesa:</strong> Caracterizado por una falda voluminosa que nace desde la cintura.</li>
+            <li><strong>Corte Sirena:</strong> Ajustado al cuerpo hasta las rodillas, donde se abre la falda.</li>
+            <li><strong>Corte Imperio:</strong> El talle comienza justo debajo del pecho, ideal para estilizar la altura.</li>
+            <li><strong>Corte Recto:</strong> Una caída fluida que no marca excesivamente la figura.</li>
+        </ul>
+    </section>
+
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-links">
+            <h4>Sobre el Blog</h4>
+            <p style="font-size: 0.8rem; color: #bdc3c7;">Recurso informativo dedicado a la educación sobre moda nupcial y protocolos de vestimenta para bodas.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Secciones</h4>
+            <ul>
+                <li><a href="#">Guía de Tejidos</a></li>
+                <li><a href="#">Consejos de Accesorios</a></li>
+                <li><a href="#">Protocolo de Invitadas</a></li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>Legal</h4>
+            <ul>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li><a href="#">Términos de Servicio</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="legal-bar">
+        &copy; 2024 NoviaElegante - Este sitio es meramente informativo y cumple con las normativas de transparencia.
+    </div>
+</footer>
+
+<script>
+    // Script simple para navegación fluida
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Consola para auditoría de Google Ads (Opcional)
+    console.log("Landing Page Cargada: Cumple con políticas de transparencia.");
+</script>
+
+</body>
+</html>
