@@ -1,307 +1,1315 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guía informativa especializada en tendencias, cortes y tejidos de vestidos de novia para una elección perfecta.">
-    <title>Guía de Estilo: Vestidos de Novia | Blog Informativo</title>
-    
-    <style>
-        /* Variables de Color */
-        :root {
-            --azul-primario: #1a3a5d;
-            --azul-claro: #f0f7ff;
-            --azul-acento: #3498db;
-            --blanco: #ffffff;
-            --gris-texto: #333333;
-            --gris-suave: #eeeeee;
-        }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="recibosairecab: blog informativo sobre China. Historia, cultura, regiones, etiqueta, transporte y planificación responsable de viajes." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>recibosairecab | Blog informativo sobre China</title>
 
-        /* Reset y Estilos Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root{
+      --bg0:#070b14;
+      --bg1:#0b1220;
+      --card:#101a2c;
+      --stroke:rgba(255,255,255,.10);
+      --stroke2:rgba(255,255,255,.16);
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.75);
+      --muted2:rgba(234,240,255,.60);
+      --accent:#7c5cff;
+      --accent2:#18c7a5;
+      --warn:#ffcc66;
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --shadow2: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 1180px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    }
+    *{ box-sizing:border-box; }
+    html, body{ height:100%; }
+    body{
+      margin:0;
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 18% -5%, rgba(124,92,255,.28), transparent 60%),
+        radial-gradient(900px 600px at 85% 10%, rgba(24,199,165,.18), transparent 55%),
+        radial-gradient(700px 500px at 45% 120%, rgba(255,204,102,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 35%, #070a12);
+      line-height: 1.45;
+      overflow-x:hidden;
+    }
+    a{ color:inherit; text-decoration:none; }
+    button, input{ font-family:inherit; }
 
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--gris-texto);
-            background-color: var(--blanco);
-        }
+    .container{
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline:auto;
+    }
 
-        /* Navegación */
-        header {
-            background-color: var(--blanco);
-            border-bottom: 1px solid var(--gris-suave);
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* Topbar */
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(14px);
+      background: rgba(7,11,20,.55);
+      border-bottom: 1px solid var(--stroke);
+    }
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width: 230px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius:12px;
+      background:
+        radial-gradient(14px 14px at 30% 30%, rgba(255,255,255,.35), transparent 60%),
+        linear-gradient(135deg, rgba(124,92,255,.95), rgba(24,199,165,.85));
+      box-shadow: 0 10px 25px rgba(124,92,255,.20);
+      border: 1px solid rgba(255,255,255,.16);
+    }
+    .brand-title{ display:flex; flex-direction:column; gap:2px; }
+    .brand-title strong{
+      font-size: 14px;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      opacity:.95;
+    }
+    .brand-title span{ font-size:12px; color: var(--muted2); }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--azul-primario);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+    .nav{
+      display:flex; align-items:center; gap:10px;
+      flex-wrap:wrap; justify-content:center;
+    }
+    .nav a{
+      font-size:13px;
+      color: var(--muted);
+      padding: 9px 12px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      transition: .2s ease;
+    }
+    .nav a:hover{
+      color: var(--text);
+      border-color: var(--stroke);
+      background: rgba(255,255,255,.04);
+    }
 
-        nav a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: var(--azul-primario);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
+    .actions{
+      display:flex; align-items:center; gap:10px;
+      justify-content:flex-end;
+      min-width: 230px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:10px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow2);
+    }
+    .pill input{
+      border:0; outline:0;
+      background: transparent;
+      color: var(--text);
+      width: 230px;
+      font-size: 13px;
+    }
+    .pill input::placeholder{ color: rgba(234,240,255,.45); }
+    .kbd{
+      font-size: 11px;
+      color: rgba(234,240,255,.55);
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.02);
+      padding: 4px 8px;
+      border-radius: 10px;
+    }
 
-        /* Hero Section */
-        .hero {
-            background-color: var(--azul-claro);
-            padding: 60px 5%;
-            text-align: center;
-        }
+    .btn{
+      appearance:none;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+      box-shadow: var(--shadow2);
+      font-size: 13px;
+      white-space:nowrap;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      border-color: var(--stroke2);
+      background: rgba(255,255,255,.05);
+    }
+    .btn.primary{
+      border-color: rgba(124,92,255,.45);
+      background: linear-gradient(135deg, rgba(124,92,255,.95), rgba(24,199,165,.80));
+      box-shadow: 0 18px 45px rgba(124,92,255,.20);
+    }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            color: var(--azul-primario);
-            margin-bottom: 20px;
-        }
+    .menu-btn{ display:none; padding: 10px 12px; }
 
-        .hero p {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            font-size: 1.1rem;
-        }
+    /* Hero */
+    header.hero{ padding: 42px 0 18px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .hero-card{
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(900px 350px at 30% 0%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(700px 350px at 90% 10%, rgba(24,199,165,.14), transparent 55%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .hero-inner{
+      padding: 28px;
+      display:flex;
+      flex-direction:column;
+      gap: 14px;
+      min-height: 330px;
+    }
+    .tag-row{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .tag{
+      font-size: 12px;
+      color: rgba(234,240,255,.8);
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      padding: 7px 10px;
+      border-radius: 999px;
+    }
+    .tag strong{ color: var(--text); font-weight: 600; }
 
-        /* Contenido Principal */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 5%;
-        }
+    .hero h1{
+      margin:0;
+      font-size: clamp(28px, 3.2vw, 46px);
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+    }
+    .hero p{
+      margin:0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 62ch;
+    }
+    .hero-cta{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 6px; }
+    .hero-meta{
+      margin-top:auto;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .metric{
+      border: 1px solid var(--stroke);
+      border-radius: 16px;
+      background: rgba(0,0,0,.18);
+      padding: 12px;
+    }
+    .metric b{ display:block; font-size: 13px; letter-spacing:.02em; }
+    .metric span{ display:block; font-size: 12px; color: var(--muted2); margin-top: 2px; }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
+    /* Side stack */
+    .side-stack{ display:grid; grid-template-rows: auto auto; gap: 18px; }
+    .panel{
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+    }
+    .panel .panel-head{
+      padding: 16px 16px 0;
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 12px;
+    }
+    .panel h2{
+      margin:0;
+      font-size: 14px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(234,240,255,.88);
+    }
+    .panel p{
+      margin:8px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 60ch;
+    }
+    .panel .panel-body{ padding: 14px 16px 16px; }
 
-        .card {
-            background: var(--blanco);
-            border: 1px solid var(--gris-suave);
-            border-radius: 4px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+    .chips{ display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px; }
+    .chip{
+      font-size: 12px;
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.02);
+      color: rgba(234,240,255,.82);
+      padding: 7px 10px;
+      border-radius: 999px;
+      cursor:pointer;
+      transition: .15s ease;
+    }
+    .chip:hover{ border-color: var(--stroke2); background: rgba(255,255,255,.05); }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+    .mini-grid{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .mini{
+      border: 1px solid var(--stroke);
+      background: rgba(0,0,0,.15);
+      border-radius: 16px;
+      padding: 12px;
+    }
+    .mini b{ display:block; font-size: 13px; }
+    .mini span{ display:block; font-size: 12px; color: var(--muted2); margin-top: 4px; }
 
-        .card-img {
-            width: 100%;
-            height: 200px;
-            background-color: var(--azul-primario);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 0.8rem;
-            text-align: center;
-            padding: 20px;
-        }
+    /* Sections */
+    section{ padding: 18px 0; }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .section-head h3{
+      margin:0;
+      font-size: 14px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(234,240,255,.88);
+    }
+    .section-head .sub{ color: var(--muted2); font-size: 13px; max-width: 75ch; }
 
-        .card-content {
-            padding: 20px;
-        }
+    .grid{ display:grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
+    .card{
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      position:relative;
+      min-height: 140px;
+    }
+    .card .inner{
+      padding: 18px;
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      height:100%;
+    }
+    .card h4{ margin:0; font-size: 16px; letter-spacing: -0.01em; }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      max-width: 80ch;
+    }
+    .card .meta{
+      margin-top:auto;
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .badge{
+      font-size: 12px;
+      border: 1px solid var(--stroke);
+      background: rgba(0,0,0,.16);
+      color: rgba(234,240,255,.80);
+      padding: 6px 9px;
+      border-radius: 999px;
+    }
+    .link{
+      margin-left:auto;
+      font-size: 12px;
+      color: rgba(234,240,255,.86);
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.02);
+      padding: 6px 9px;
+      border-radius: 999px;
+      cursor:pointer;
+      transition: .15s ease;
+      white-space:nowrap;
+    }
+    .link:hover{ border-color: var(--stroke2); background: rgba(255,255,255,.05); }
 
-        .card-content h3 {
-            color: var(--azul-primario);
-            margin-bottom: 10px;
-        }
+    .span-12{ grid-column: span 12; }
+    .span-8{ grid-column: span 8; }
+    .span-6{ grid-column: span 6; }
+    .span-4{ grid-column: span 4; }
+    .span-3{ grid-column: span 3; }
 
-        /* Secciones de Texto Informativo */
-        .info-section {
-            margin-bottom: 60px;
-        }
+    /* Table-like */
+    .table{
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      overflow:hidden;
+      background: rgba(255,255,255,.02);
+    }
+    .trow{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr 1fr .8fr;
+      border-bottom: 1px solid var(--stroke);
+    }
+    .trow:last-child{ border-bottom: 0; }
+    .tcell{
+      padding: 12px 14px;
+      font-size: 13px;
+      color: rgba(234,240,255,.86);
+      border-right: 1px solid var(--stroke);
+    }
+    .tcell:last-child{ border-right: 0; }
+    .thead .tcell{
+      font-size: 12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color: rgba(234,240,255,.72);
+      background: rgba(0,0,0,.22);
+    }
+    .hint{ font-size: 12px; color: var(--muted2); margin-top: 10px; }
 
-        .info-section h2 {
-            color: var(--azul-primario);
-            border-bottom: 2px solid var(--azul-claro);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    /* Policy blocks */
+    .policy{
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      background: rgba(0,0,0,.18);
+      padding: 16px;
+    }
+    .policy h5{
+      margin:0 0 8px;
+      font-size: 12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(234,240,255,.85);
+    }
+    .policy p{ margin:0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+    .policy ul{ margin: 10px 0 0; padding-left: 18px; color: var(--muted); }
+    .policy li{ margin: 6px 0; font-size: 13px; line-height: 1.55; }
 
-        /* Footer */
-        footer {
-            background-color: var(--azul-primario);
-            color: var(--blanco);
-            padding: 40px 5%;
-            margin-top: 60px;
-        }
+    /* Modal */
+    .modal{
+      position:fixed;
+      inset:0;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding: 18px;
+      background: rgba(0,0,0,.55);
+      z-index: 90;
+    }
+    .modal[aria-hidden="false"]{ display:flex; }
+    .modal-card{
+      width: min(980px, 100%);
+      border: 1px solid var(--stroke);
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(16,26,44,.98), rgba(11,18,32,.98));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .modal-head{
+      display:flex; align-items:center; justify-content:space-between; gap:10px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--stroke);
+      background: rgba(0,0,0,.20);
+    }
+    .modal-head strong{
+      font-size: 13px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color: rgba(234,240,255,.88);
+    }
+    .modal-body{
+      padding: 16px;
+      color: rgba(234,240,255,.90);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+    .modal-close{
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 12px;
+      cursor:pointer;
+    }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-        }
+    /* Footer */
+    footer{
+      padding: 26px 0 40px;
+      border-top: 1px solid var(--stroke);
+      margin-top: 18px;
+      background: rgba(0,0,0,.10);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 14px;
+      align-items:start;
+    }
+    footer p, footer a{
+      color: var(--muted2);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    footer a:hover{ color: rgba(234,240,255,.95); }
+    .fineprint{
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed rgba(255,255,255,.14);
+      color: rgba(234,240,255,.55);
+      font-size: 12px;
+    }
 
-        .footer-links h4 {
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
+    /* Mobile */
+    @media (max-width: 980px){
+      .hero-grid{ grid-template-columns: 1fr; }
+      .actions{ min-width:auto; }
+      .pill input{ width: 170px; }
+    }
+    @media (max-width: 760px){
+      .nav{ display:none; }
+      .menu-btn{ display:inline-flex; }
+      .pill{ display:none; }
+      .hero-inner{ min-height: unset; }
+      .hero-meta{ grid-template-columns: 1fr; }
+      .mini-grid{ grid-template-columns: 1fr; }
+      .footer-grid{ grid-template-columns: 1fr; }
+      .trow{ grid-template-columns: 1.2fr .9fr 1fr; }
+      .trow .tcell:nth-child(4){ display:none; }
+      .span-8,.span-6,.span-4,.span-3{ grid-column: span 12; }
+    }
 
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 8px;
-        }
-
-        .footer-links a {
-            color: #bdc3c7;
-            text-decoration: none;
-            font-size: 0.85rem;
-        }
-
-        .legal-bar {
-            text-align: center;
-            padding-top: 30px;
-            margin-top: 30px;
-            border-top: 1px solid #2c3e50;
-            font-size: 0.8rem;
-        }
-
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8rem; }
-            nav { display: none; } /* En una landing real usarías un menú hamburguesa */
-        }
-    </style>
+    @media (prefers-reduced-motion: reduce){
+      *{ transition:none !important; scroll-behavior:auto !important; }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brand-title">
+            <strong>recibosairecab</strong>
+            <span>Blog informativo sobre China</span>
+          </div>
+        </a>
 
-<header>
-    <div class="logo">NoviaElegante</div>
-    <nav>
-        <a href="#tendencias">Tendencias</a>
-        <a href="#cortes">Guía de Cortes</a>
-        <a href="#tejidos">Tejidos</a>
-    </nav>
-</header>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#guias">Guías</a>
+          <a href="#regiones">Regiones</a>
+          <a href="#cultura">Cultura</a>
+          <a href="#planificacion">Planificación</a>
+          <a href="#faq">Preguntas</a>
+          <a href="#privacidad">Privacidad</a>
+        </nav>
 
-<section class="hero">
-    <h1>Guía Profesional de Vestidos de Boda</h1>
-    <p>Explore nuestra base de conocimientos sobre alta costura nupcial, diseñada para ayudarle a comprender los elementos clave antes de su gran elección.</p>
-</section>
+        <div class="actions">
+          <div class="pill" role="search">
+            <input id="searchInput" type="search" placeholder="Buscar temas del blog" aria-label="Buscar contenido" />
+            <span class="kbd" aria-hidden="true">Ctrl K</span>
+          </div>
+          <button class="btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+            Menú
+          </button>
+          <a class="btn primary" href="#guias">Explorar lecturas</a>
+        </div>
+      </div>
 
-<div class="container">
-    
-    <section id="tendencias" class="info-section">
-        <h2>Tendencias Actuales en el Mundo Nupcial</h2>
-        <p>El diseño de vestidos de novia ha evolucionado hacia una mezcla de minimalismo clásico y detalles arquitectónicos. En la actualidad, la tendencia se inclina hacia la personalización y la comodidad sin sacrificar la elegancia.</p>
-        
+      <div id="mobileMenu" class="panel" style="display:none; margin: 0 0 14px;">
+        <div class="panel-body">
+          <div class="chips" role="navigation" aria-label="Navegación móvil">
+            <a class="chip" href="#guias">Guías</a>
+            <a class="chip" href="#regiones">Regiones</a>
+            <a class="chip" href="#cultura">Cultura</a>
+            <a class="chip" href="#planificacion">Planificación</a>
+            <a class="chip" href="#faq">Preguntas</a>
+            <a class="chip" href="#privacidad">Privacidad</a>
+          </div>
+          <div class="hint">Sugerencia: usa el buscador para filtrar tarjetas por tema.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <article class="hero-card">
+          <div class="hero-inner">
+            <div class="tag-row">
+              <span class="tag"><strong>Propósito:</strong> información clara y responsable</span>
+              <span class="tag"><strong>Enfoque:</strong> cultura, regiones, logística</span>
+              <span class="tag"><strong>Formato:</strong> guías estructuradas</span>
+            </div>
+
+            <h1>China con contexto: historia, cultura, regiones y planificación sin improvisar.</h1>
+            <p>
+              recibosairecab es un blog informativo para lectores que quieren comprender China antes de viajar o estudiar su cultura:
+              regiones con identidad propia, etiqueta cotidiana, movilidad, temporadas y decisiones prácticas. No vendemos tours;
+              publicamos contenido editorial con criterio y transparencia.
+            </p>
+
+            <div class="hero-cta">
+              <button class="btn primary" type="button" data-open="modalStart">Leer guía inicial</button>
+              <a class="btn" href="#planificacion">Ver planificación</a>
+              <a class="btn" href="#privacidad">Políticas</a>
+            </div>
+
+            <div class="hero-meta" aria-label="Indicadores editoriales">
+              <div class="metric">
+                <b>Regiones explicadas</b>
+                <span>Panorama de norte, sur, costa e interior</span>
+              </div>
+              <div class="metric">
+                <b>Cultura y etiqueta</b>
+                <span>Contexto para interactuar con respeto</span>
+              </div>
+              <div class="metric">
+                <b>Planificación práctica</b>
+                <span>Temporadas, transporte y presupuesto orientativo</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="side-stack">
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Temas esenciales</h2>
+                <p>Atajos a lecturas base para entender el país y planear con calma.</p>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div class="chips" aria-label="Filtros rápidos">
+                <button class="chip" type="button" data-filter="historia">Historia</button>
+                <button class="chip" type="button" data-filter="etiqueta">Etiqueta</button>
+                <button class="chip" type="button" data-filter="transporte">Transporte</button>
+                <button class="chip" type="button" data-filter="temporadas">Temporadas</button>
+                <button class="chip" type="button" data-filter="ciudades">Ciudades</button>
+                <button class="chip" type="button" data-filter="idioma">Idioma</button>
+              </div>
+
+              <div class="mini-grid">
+                <div class="mini">
+                  <b>Primera lectura</b>
+                  <span>Cómo pensar en distancias, tiempos y regiones.</span>
+                </div>
+                <div class="mini">
+                  <b>Etiquetas útiles</b>
+                  <span>Saludos, normas sociales y situaciones comunes.</span>
+                </div>
+                <div class="mini">
+                  <b>Movilidad</b>
+                  <span>Tren, metro y trayectos con criterio.</span>
+                </div>
+                <div class="mini">
+                  <b>Temporadas</b>
+                  <span>Clima, festividades y cambios de precios.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Boletín editorial</h2>
+                <p>Recibe una selección de lecturas (sin spam). Solo contenido informativo del blog.</p>
+              </div>
+            </div>
+            <div class="panel-body">
+              <form id="newsletterForm" novalidate>
+                <div style="display:grid; grid-template-columns: 1fr; gap:10px;">
+                  <label style="font-size:12px; color: var(--muted2);">
+                    Correo (opcional)
+                    <input
+                      id="emailInput"
+                      type="email"
+                      placeholder="tu@correo.com"
+                      style="margin-top:8px; width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--stroke); background: rgba(0,0,0,.20); color: var(--text); outline: none;"
+                      aria-label="Correo para boletín"
+                    />
+                  </label>
+                  <button class="btn" type="submit">Guardar preferencia</button>
+                  <div id="newsletterMsg" class="hint" role="status" aria-live="polite"></div>
+                </div>
+              </form>
+              <div class="hint">
+                Si ingresas tu correo, se usará únicamente para enviarte contenido del blog. Puedes dejarlo vacío y seguir navegando.
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- GUIAS -->
+    <section id="guias">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Guías destacadas</h3>
+            <div class="sub">Tarjetas con estructura: objetivo, contexto y pasos prácticos para el lector.</div>
+          </div>
+          <button class="btn" type="button" data-open="modalCriterios">Criterios editoriales</button>
+        </div>
+
+        <div class="grid" id="cardsRoot" aria-live="polite">
+          <article class="card span-8" data-tags="historia ciudades">
+            <div class="inner">
+              <h4>China en pocas ideas: cómo entender el mapa antes de planear</h4>
+              <p>
+                Un marco para ubicarse: distancias reales, macro-regiones, contrastes climáticos y por qué un itinerario
+                debe priorizar zonas (no “muchas ciudades a la vez”). Incluye una guía de decisión para elegir 2–3 bases.
+              </p>
+              <div class="meta">
+                <span class="badge">Guía base</span>
+                <span class="badge">Contexto</span>
+                <button class="link" type="button" data-open="modalMapa">Abrir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-4" data-tags="etiqueta cultura">
+            <div class="inner">
+              <h4>Etiqueta cotidiana: interacciones respetuosas sin complicarte</h4>
+              <p>
+                Reglas simples sobre cortesía, turnos, regalos, conversación y situaciones comunes en espacios públicos.
+                Pensado para viajeros y lectores curiosos.
+              </p>
+              <div class="meta">
+                <span class="badge">Cultura</span>
+                <span class="badge">Práctico</span>
+                <button class="link" type="button" data-open="modalEtiqueta">Abrir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-4" data-tags="transporte ciudades">
+            <div class="inner">
+              <h4>Transporte: cómo elegir entre tren, metro y vuelos internos</h4>
+              <p>
+                Cuándo conviene el tren de alta velocidad, cómo planificar traslados urbanos y qué variables revisar
+                para que el día no se te vaya en movimiento.
+              </p>
+              <div class="meta">
+                <span class="badge">Movilidad</span>
+                <span class="badge">Planificación</span>
+                <button class="link" type="button" data-open="modalTransporte">Abrir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-8" data-tags="temporadas planificacion">
+            <div class="inner">
+              <h4>Temporadas y festividades: planifica con margen y expectativas realistas</h4>
+              <p>
+                Cómo afecta el clima por regiones y por qué las festividades pueden cambiar disponibilidad y precios.
+                Incluye una lista de verificación para reservar con prudencia y evitar agendas rígidas.
+              </p>
+              <div class="meta">
+                <span class="badge">Temporadas</span>
+                <span class="badge">Checklist</span>
+                <button class="link" type="button" data-open="modalTemporadas">Abrir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-6" data-tags="idioma cultura">
+            <div class="inner">
+              <h4>Idioma y señalización: cómo moverte sin depender de improvisación</h4>
+              <p>
+                Herramientas útiles, cómo preparar direcciones, nombres de lugares y rutinas para pedir ayuda de forma clara.
+              </p>
+              <div class="meta">
+                <span class="badge">Idioma</span>
+                <span class="badge">Orientación</span>
+                <button class="link" type="button" data-open="modalIdioma">Abrir</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-6" data-tags="ciudades cultura">
+            <div class="inner">
+              <h4>Ciudades y enfoques: elegir por interés, no por lista</h4>
+              <p>
+                Cómo decidir entre grandes metrópolis, ciudades históricas y naturaleza, con ejemplos de itinerarios
+                por intención (cultura, comida, paisajes).
+              </p>
+              <div class="meta">
+                <span class="badge">Curaduría</span>
+                <span class="badge">Enfoque</span>
+                <button class="link" type="button" data-open="modalCiudades">Abrir</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGIONES -->
+    <section id="regiones">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Regiones por identidad</h3>
+            <div class="sub">Panorama editorial: diferencias de clima, ritmo urbano, gastronomía y paisajes.</div>
+          </div>
+        </div>
+
         <div class="grid">
-            <article class="card">
-                <div class="card-img" style="background-image: linear-gradient(rgba(26,58,93,0.8), rgba(26,58,93,0.8)), url('https://images.unsplash.com/photo-1546193430-c2d207739ed7?q=80&w=400'); background-size: cover;">
-                    Imagen de Vestido Minimalista
-                </div>
-                <div class="card-content">
-                    <h3>Minimalismo Sofisticado</h3>
-                    <p>Líneas limpias y tejidos lisos como el crepé o el mikado que resaltan la figura de la novia.</p>
-                </div>
-            </article>
+          <article class="card span-4" data-tags="regiones ciudades">
+            <div class="inner">
+              <h4>Norte</h4>
+              <p>
+                Estaciones marcadas y gran peso histórico-político. Útil para rutas que combinan museos, monumentos y barrios
+                tradicionales con tramos modernos.
+              </p>
+              <div class="meta">
+                <span class="badge">Clima marcado</span>
+                <span class="badge">Historia</span>
+              </div>
+            </div>
+          </article>
 
-            <article class="card">
-                <div class="card-img" style="background-image: linear-gradient(rgba(26,58,93,0.8), rgba(26,58,93,0.8)), url('https://images.unsplash.com/photo-1594553763260-26233777f98f?q=80&w=400'); background-size: cover;">
-                    Imagen de Encaje Detallado
-                </div>
-                <div class="card-content">
-                    <h3>Encaje Bohemio</h3>
-                    <p>Patrones florales y texturas ligeras ideales para ceremonias al aire libre o destinos de playa.</p>
-                </div>
-            </article>
+          <article class="card span-4" data-tags="regiones gastronomia">
+            <div class="inner">
+              <h4>Este costero</h4>
+              <p>
+                Densidad urbana alta, contraste entre tradición y vanguardia, y amplia oferta cultural. Ideal si te interesa
+                ciudad, arte contemporáneo y experiencias gastronómicas.
+              </p>
+              <div class="meta">
+                <span class="badge">Urbano</span>
+                <span class="badge">Cultura</span>
+              </div>
+            </div>
+          </article>
 
-            <article class="card">
-                <div class="card-img" style="background-image: linear-gradient(rgba(26,58,93,0.8), rgba(26,58,93,0.8)), url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400'); background-size: cover;">
-                    Imagen de Corte Clásico
-                </div>
-                <div class="card-content">
-                    <h3>Clásicos Renovados</h3>
-                    <p>El volumen tradicional se actualiza con bolsillos ocultos y escotes asimétricos modernos.</p>
-                </div>
-            </article>
+          <article class="card span-4" data-tags="regiones naturaleza">
+            <div class="inner">
+              <h4>Sur e interior</h4>
+              <p>
+                Paisajes diversos y ritmos más pausados en ciertas zonas. Buena opción si buscas naturaleza, rutas fotográficas
+                y menos “agenda de ciudad”.
+              </p>
+              <div class="meta">
+                <span class="badge">Paisajes</span>
+                <span class="badge">Ritmo variado</span>
+              </div>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
 
-    <section id="cortes" class="info-section">
-        <h2>Guía de Cortes según la Silueta</h2>
-        <p>Identificar el corte adecuado es fundamental para armonizar las proporciones del cuerpo:</p>
-        <ul>
-            <li><strong>Corte Princesa:</strong> Caracterizado por una falda voluminosa que nace desde la cintura.</li>
-            <li><strong>Corte Sirena:</strong> Ajustado al cuerpo hasta las rodillas, donde se abre la falda.</li>
-            <li><strong>Corte Imperio:</strong> El talle comienza justo debajo del pecho, ideal para estilizar la altura.</li>
-            <li><strong>Corte Recto:</strong> Una caída fluida que no marca excesivamente la figura.</li>
-        </ul>
+    <!-- CULTURA -->
+    <section id="cultura">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Cultura y contexto</h3>
+            <div class="sub">Lecturas para comprender hábitos, convivencia y expectativas en escenarios comunes.</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card span-6" data-tags="cultura etiqueta">
+            <div class="inner">
+              <h4>Convivencia diaria: lo que suele sorprender al visitante</h4>
+              <p>
+                Normas implícitas en espacios concurridos, dinámica de filas, volúmenes, y cómo adaptarte sin juzgar.
+                Incluye frases y actitudes útiles para resolver roces cotidianos.
+              </p>
+              <div class="meta">
+                <span class="badge">Contexto</span>
+                <span class="badge">Prudencia</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-6" data-tags="cultura historia">
+            <div class="inner">
+              <h4>Historia para viajeros: cómo leer una ciudad con otra mirada</h4>
+              <p>
+                En vez de memorizar fechas, aprende a identificar capas urbanas: templos, barrios, zonas industriales
+                reconvertidas y planificación moderna.
+              </p>
+              <div class="meta">
+                <span class="badge">Historia aplicada</span>
+                <span class="badge">Lectura urbana</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-12" data-tags="cultura gastronomia">
+            <div class="inner">
+              <h4>Gastronomía: cómo explorar sin perderte</h4>
+              <p>
+                Enfócate por estilo (caldos, fideos, salteados, dim sum, comida callejera organizada). Pide por porciones,
+                observa rotación del lugar y prioriza higiene y claridad. El objetivo es disfrutar con criterio.
+              </p>
+              <div class="meta">
+                <span class="badge">Comida</span>
+                <span class="badge">Criterios</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-</div>
+    <!-- PLANIFICACION -->
+    <section id="planificacion">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Planificación responsable</h3>
+            <div class="sub">Estructuras para organizar un viaje o lectura sin promesas irreales y con expectativas claras.</div>
+          </div>
+        </div>
 
-<footer>
-    <div class="footer-grid">
-        <div class="footer-links">
-            <h4>Sobre el Blog</h4>
-            <p style="font-size: 0.8rem; color: #bdc3c7;">Recurso informativo dedicado a la educación sobre moda nupcial y protocolos de vestimenta para bodas.</p>
-        </div>
-        <div class="footer-links">
-            <h4>Secciones</h4>
-            <ul>
-                <li><a href="#">Guía de Tejidos</a></li>
-                <li><a href="#">Consejos de Accesorios</a></li>
-                <li><a href="#">Protocolo de Invitadas</a></li>
-            </ul>
-        </div>
-        <div class="footer-links">
-            <h4>Legal</h4>
-            <ul>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Términos de Servicio</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="legal-bar">
-        &copy; 2024 NoviaElegante - Este sitio es meramente informativo y cumple con las normativas de transparencia.
-    </div>
-</footer>
+        <div class="table" role="table" aria-label="Tabla de planificación">
+          <div class="trow thead" role="row">
+            <div class="tcell" role="columnheader">Bloque</div>
+            <div class="tcell" role="columnheader">Tiempo</div>
+            <div class="tcell" role="columnheader">Objetivo</div>
+            <div class="tcell" role="columnheader">Consejo</div>
+          </div>
 
-<script>
-    // Script simple para navegación fluida
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({
-                    top: target.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
+          <div class="trow" role="row">
+            <div class="tcell" role="cell">Base urbana</div>
+            <div class="tcell" role="cell">2–4 días</div>
+            <div class="tcell" role="cell">Museos, barrios, ritmo de ciudad</div>
+            <div class="tcell" role="cell">Reduce traslados largos</div>
+          </div>
+
+          <div class="trow" role="row">
+            <div class="tcell" role="cell">Excursión cercana</div>
+            <div class="tcell" role="cell">1 día</div>
+            <div class="tcell" role="cell">Paisaje o patrimonio en entorno</div>
+            <div class="tcell" role="cell">Reserva margen de retorno</div>
+          </div>
+
+          <div class="trow" role="row">
+            <div class="tcell" role="cell">Traslado entre regiones</div>
+            <div class="tcell" role="cell">1 día</div>
+            <div class="tcell" role="cell">Cambiar de clima y enfoque</div>
+            <div class="tcell" role="cell">Evita encadenar planes</div>
+          </div>
+        </div>
+
+        <div class="hint">
+          Las duraciones son orientativas. Verifica requisitos, horarios y condiciones con fuentes oficiales.
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Preguntas frecuentes</h3>
+            <div class="sub">Respuestas claras para lectores y viajeros. Enfoque informativo, sin ventas.</div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <article class="card span-6">
+            <div class="inner">
+              <h4>¿El blog vende tours, visados o servicios?</h4>
+              <p>
+                No. recibosairecab publica contenido informativo. Si en el futuro se agregan enlaces afiliados o
+                recomendaciones comerciales, se indicará de forma visible.
+              </p>
+              <div class="meta">
+                <span class="badge">Transparencia</span>
+                <span class="badge">Editorial</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-6">
+            <div class="inner">
+              <h4>¿La información es “oficial”?</h4>
+              <p>
+                Es editorial y orientativa. Para trámites, requisitos de entrada o normativas, debes confirmar en fuentes
+                oficiales y actualizadas antes de tomar decisiones.
+              </p>
+              <div class="meta">
+                <span class="badge">Responsabilidad</span>
+                <span class="badge">Verificación</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card span-12">
+            <div class="inner">
+              <h4>¿Cómo elijo una ruta si tengo pocos días?</h4>
+              <p>
+                Elige una sola región base y añade una excursión cercana. Evita “ver todo”. Un plan con pocos traslados
+                suele ser más disfrutable y menos costoso en energía y tiempo.
+              </p>
+              <div class="meta">
+                <span class="badge">Itinerarios</span>
+                <span class="badge">Eficiencia</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVACIDAD / POLITICAS -->
+    <section id="privacidad">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Políticas y transparencia</h3>
+            <div class="sub">Textos visibles, claros y consistentes con buenas prácticas publicitarias y de privacidad.</div>
+          </div>
+          <button class="btn" type="button" data-open="modalPrivacidad">Ver versión ampliada</button>
+        </div>
+
+        <div class="grid">
+          <div class="policy span-6" id="privacyPolicy">
+            <h5>Política de privacidad (resumen)</h5>
+            <p>
+              recibosairecab recopila la mínima información necesaria para operar el sitio. Si decides ingresar tu correo
+              para el boletín, se utilizará únicamente para enviarte contenido editorial. No vendemos datos personales.
+            </p>
+            <ul>
+              <li><b>Datos opcionales:</b> correo para boletín (si lo proporcionas).</li>
+              <li><b>Uso:</b> envío de contenido informativo y comunicación editorial.</li>
+              <li><b>Control:</b> puedes solicitar actualización o eliminación.</li>
+              <li><b>Seguridad:</b> aplicamos medidas razonables para proteger la información.</li>
+            </ul>
+          </div>
+
+          <div class="policy span-6" id="cookiesPolicy">
+            <h5>Cookies (resumen)</h5>
+            <p>
+              El sitio puede usar cookies técnicas para funcionamiento básico. Si incorporas analítica o publicidad,
+              informa al usuario y solicita consentimiento cuando corresponda según tu jurisdicción.
+            </p>
+            <ul>
+              <li><b>Técnicas:</b> necesarias para recordar preferencias básicas.</li>
+              <li><b>Analítica:</b> opcional; debe comunicarse de forma transparente.</li>
+              <li><b>Publicidad:</b> si se usa, debe declararse y configurarse con consentimiento.</li>
+            </ul>
+          </div>
+
+          <div class="policy span-12" id="adsPolicy">
+            <h5>Declaración de transparencia (publicidad)</h5>
+            <p>
+              Esta página es informativa y evita afirmaciones engañosas, promesas irreales y prácticas intrusivas.
+              La navegación es clara y el usuario entiende qué ofrece el sitio: contenido editorial sobre China.
+              Si se incorporan enlaces patrocinados o afiliados, se indicará de manera visible.
+            </p>
+          </div>
+        </div>
+
+        <div class="hint">
+          Recomendación: agrega un correo de contacto real, un enlace a términos completos y, si aplica,
+          un banner de consentimiento para cookies según tu país/mercado.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p style="margin:0 0 8px; color: rgba(234,240,255,.88); font-weight:700;">recibosairecab</p>
+          <p style="margin:0;">
+            Blog informativo sobre China: guías, cultura, regiones y planificación responsable. Contenido editorial con foco en claridad.
+          </p>
+          <div class="fineprint">
+            © <span id="year"></span> recibosairecab. Todos los derechos reservados.
+          </div>
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px; color: rgba(234,240,255,.88); font-weight:700;">Secciones</p>
+          <p style="margin:0;"><a href="#guias">Guías</a></p>
+          <p style="margin:0;"><a href="#regiones">Regiones</a></p>
+          <p style="margin:0;"><a href="#cultura">Cultura</a></p>
+          <p style="margin:0;"><a href="#planificacion">Planificación</a></p>
+        </div>
+
+        <div>
+          <p style="margin:0 0 8px; color: rgba(234,240,255,.88); font-weight:700;">Contacto</p>
+          <p style="margin:0;">
+            Para correcciones editoriales y privacidad, escribe a: <a href="#" onclick="openContact(); return false;">ver opciones</a>
+          </p>
+          <p style="margin:10px 0 0;" class="hint">
+            Sustituye “opciones” por un correo real o un formulario externo cuando lo implementes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Detalle">
+    <div class="modal-card" role="document">
+      <div class="modal-head">
+        <strong id="modalTitle">Detalle</strong>
+        <button class="modal-close" type="button" id="modalClose">Cerrar</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    const $ = (q, el=document) => el.querySelector(q);
+    const $$ = (q, el=document) => Array.from(el.querySelectorAll(q));
+
+    // Año
+    $("#year").textContent = new Date().getFullYear();
+
+    // Menú móvil
+    const menuBtn = $("#menuBtn");
+    const mobileMenu = $("#mobileMenu");
+    if (menuBtn){
+      menuBtn.addEventListener("click", () => {
+        const isOpen = mobileMenu.style.display === "block";
+        mobileMenu.style.display = isOpen ? "none" : "block";
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
+
+    // Normalización
+    function normalize(s){
+      return (s || "")
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+    }
+
+    // Filtro de tarjetas
+    const searchInput = $("#searchInput");
+    const cardsRoot = $("#cardsRoot");
+    const cards = cardsRoot ? $$(".card", cardsRoot) : [];
+
+    function applyFilter({ query="", tag="" }){
+      const q = normalize(query);
+      const t = normalize(tag);
+
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const text = normalize(card.innerText);
+        const tags = normalize(card.getAttribute("data-tags") || "");
+        const matchesQuery = !q || text.includes(q) || tags.includes(q);
+        const matchesTag = !t || tags.split(/\s+/).includes(t);
+        const show = matchesQuery && matchesTag;
+        card.style.display = show ? "" : "none";
+        if (show) visibleCount++;
+      });
+      if (cardsRoot) cardsRoot.setAttribute("data-visible", visibleCount);
+    }
+
+    if (searchInput){
+      searchInput.addEventListener("input", (e) => applyFilter({ query: e.target.value }));
+    }
+
+    // Atajo Ctrl/Cmd + K
+    document.addEventListener("keydown", (e) => {
+      const key = e.key.toLowerCase();
+      const isMac = navigator.platform.toLowerCase().includes("mac");
+      const combo = (isMac && e.metaKey && key === "k") || (!isMac && e.ctrlKey && key === "k");
+      if (combo){
+        e.preventDefault();
+        if (searchInput) searchInput.focus();
+      }
+      if (key === "escape") closeModal();
     });
 
-    // Consola para auditoría de Google Ads (Opcional)
-    console.log("Landing Page Cargada: Cumple con políticas de transparencia.");
-</script>
+    // Chips
+    $$(".chip[data-filter]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const tag = btn.getAttribute("data-filter");
+        applyFilter({ tag });
+        const top = $("#guias");
+        if (top) top.scrollIntoView({ behavior:"smooth", block:"start" });
+      });
+    });
 
+    // Newsletter informativo (sin promesas)
+    const newsletterForm = $("#newsletterForm");
+    const emailInput = $("#emailInput");
+    const newsletterMsg = $("#newsletterMsg");
+
+    function isValidEmail(v){
+      if (!v) return true; // opcional
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    }
+
+    if (newsletterForm){
+      newsletterForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const v = (emailInput?.value || "").trim();
+        if (!isValidEmail(v)){
+          newsletterMsg.textContent = "Por favor revisa el formato del correo. También puedes dejarlo vacío.";
+          return;
+        }
+        newsletterMsg.textContent = v
+          ? "Preferencia guardada. Para uso real, conecta este formulario a tu proveedor de boletines."
+          : "Listo. Puedes seguir navegando sin dejar correo.";
+        newsletterForm.reset();
+      });
+    }
+
+    // Modal
+    const modal = $("#modal");
+    const modalTitle = $("#modalTitle");
+    const modalBody = $("#modalBody");
+    const modalClose = $("#modalClose");
+
+    const MODAL_CONTENT = {
+      modalStart: {
+        title: "Guía inicial: cómo leer China con criterio",
+        body: `
+          <p><b>1) Piensa por regiones, no por “lista de ciudades”.</b> China es grande y diversa. Elegir una región base reduce traslados y mejora la experiencia.</p>
+          <p><b>2) Diseña el día por bloques.</b> Mañana (objetivo principal), mediodía (pausa larga) y tarde (segundo objetivo). Deja margen para transporte.</p>
+          <p><b>3) Ajusta por temporada.</b> Clima y festividades cambian disponibilidad y precios. Planifica con flexibilidad.</p>
+          <p><b>4) Respeta el contexto cultural.</b> Observa normas del lugar, pregunta con cortesía y evita suposiciones. La adaptación mejora cualquier viaje.</p>
+          <p class="hint">Este sitio es informativo. Verifica requisitos oficiales para trámites o normativas.</p>
+        `
+      },
+      modalCriterios: {
+        title: "Criterios editoriales",
+        body: `
+          <p><b>Claridad:</b> sin exageraciones ni promesas irreales.</p>
+          <p><b>Utilidad:</b> cada guía incluye objetivo, contexto y pasos.</p>
+          <p><b>Transparencia:</b> si hay enlaces patrocinados o afiliados, se indicará.</p>
+          <p><b>Responsume:</b> información orientativa; para trámites, consulta fuentes oficiales.</p>
+        `
+      },
+      modalMapa: {
+        title: "Mapa mental para planear",
+        body: `
+          <p><b>Distancias:</b> la escala importa. Evita itinerarios con demasiados saltos.</p>
+          <p><b>Bases:</b> elige 1–2 ciudades base por región y añade excursiones cercanas.</p>
+          <p><b>Prioridades:</b> cultura urbana, historia, paisajes o gastronomía. Un objetivo por día mejora calidad.</p>
+          <p><b>Transporte:</b> decide primero traslados y luego rellena con visitas.</p>
+        `
+      },
+      modalEtiqueta: {
+        title: "Etiqueta cotidiana",
+        body: `
+          <p><b>Observa antes de actuar:</b> cómo se forman filas, cómo se paga y cómo se solicita ayuda.</p>
+          <p><b>Comunicación:</b> frases cortas, tono tranquilo y paciencia. Evita confrontación.</p>
+          <p><b>Detalles útiles:</b> lleva direcciones escritas y nombres de lugares guardados en tu teléfono.</p>
+        `
+      },
+      modalTransporte: {
+        title: "Transporte: decisiones rápidas",
+        body: `
+          <p><b>Tren:</b> suele convenir para medias distancias y planificación por horarios.</p>
+          <p><b>Metro:</b> eficiente en grandes ciudades; planifica entradas/salidas según tu destino.</p>
+          <p><b>Vuelo interno:</b> útil para saltos largos, pero cuenta traslados al aeropuerto y controles.</p>
+          <p class="hint">El mejor medio depende de tiempo total puerta a puerta, no solo del trayecto.</p>
+        `
+      },
+      modalTemporadas: {
+        title: "Temporadas y festividades",
+        body: `
+          <p><b>Clima:</b> cambia por región y puede afectar planes exteriores.</p>
+          <p><b>Festividades:</b> pueden impactar disponibilidad y precios. Reserva con margen y flexibilidad.</p>
+          <p><b>Checklist:</b> confirma horarios, identifica alternativas interiores, y evita agendas sin espacio de ajuste.</p>
+        `
+      },
+      modalIdioma: {
+        title: "Idioma y orientación",
+        body: `
+          <p><b>Preparación:</b> guarda destinos en tu teléfono y lleva capturas con caracteres/nombres.</p>
+          <p><b>Rutinas:</b> practica pedir ayuda con frases simples y señas claras.</p>
+          <p><b>Señalización:</b> planifica entradas, salidas y puntos de referencia dentro de estaciones.</p>
+        `
+      },
+      modalCiudades: {
+        title: "Cómo elegir ciudades",
+        body: `
+          <p><b>Por intención:</b> historia (barrios antiguos), modernidad (distritos actuales), paisajes (zonas naturales), comida (mercados y especialidades).</p>
+          <p><b>Por logística:</b> elige bases con buena conectividad y evita cambios de hotel constantes.</p>
+          <p class="hint">Un viaje “más corto” en traslados suele sentirse más largo en experiencia.</p>
+        `
+      },
+      modalPrivacidad: {
+        title: "Política de privacidad (versión ampliada)",
+        body: `
+          <p><b>1) Responsable del sitio:</b> recibosairecab (blog informativo). Puedes añadir aquí el nombre legal y un correo real.</p>
+          <p><b>2) Datos que podríamos recopilar:</b> correo si te suscribes (opcional), y datos técnicos básicos (por ejemplo, tipo de navegador) para funcionamiento y seguridad.</p>
+          <p><b>3) Finalidad:</b> envío de contenidos del blog (si te suscribes), mejora del sitio y prevención de abuso.</p>
+          <p><b>4) Base legal:</b> consentimiento del usuario para el boletín; interés legítimo para seguridad/operación.</p>
+          <p><b>5) Compartición:</b> no vendemos datos. Si usas proveedores (email marketing/analítica), informa quiénes son y con qué propósito.</p>
+          <p><b>6) Conservación:</b> mantén el correo solo mientras exista la suscripción o hasta solicitud de eliminación.</p>
+          <p><b>7) Derechos:</b> acceso, rectificación y eliminación. Indica un canal de contacto para solicitudes.</p>
+          <p><b>8) Cookies:</b> si agregas analítica o publicidad, informa y configura consentimiento según tu jurisdicción.</p>
+          <p class="hint">Este texto es una plantilla informativa. Ajusta según tus herramientas y país.</p>
+        `
+      }
+    };
+
+    function openModal(key){
+      const data = MODAL_CONTENT[key];
+      if (!data) return;
+      modalTitle.textContent = data.title;
+      modalBody.innerHTML = data.body;
+      modal.setAttribute("aria-hidden","false");
+      modalClose.focus();
+    }
+    function closeModal(){
+      if (!modal) return;
+      modal.setAttribute("aria-hidden","true");
+    }
+
+    $$("[data-open]").forEach(el => {
+      el.addEventListener("click", () => openModal(el.getAttribute("data-open")));
+    });
+
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+    if (modal){
+      modal.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
+    }
+
+    function openContact(){
+      openModal("modalPrivacidad");
+    }
+    window.openContact = openContact;
+  </script>
 </body>
 </html>
